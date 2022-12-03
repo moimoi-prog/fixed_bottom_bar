@@ -47,7 +47,7 @@ class RootPageState extends State<RootPage> {
             .toList(),
         onTap: (index) {
           if (index == currentTabType.index) {
-            navigatorKeys[currentTabType]!.currentState!.popUntil
+            tabNavigatorKeys[currentTabType]!.currentState!.popUntil
                 .call((route) => route.isFirst);
           } else {
             selectTab(TabType.values[index]);
@@ -65,7 +65,7 @@ class RootPageState extends State<RootPage> {
     return Offstage(
       offstage: currentTabType != tabItem,
       child: TabNavigator(
-        navigationKey: navigatorKeys[tabItem]!,
+        navigationKey: tabNavigatorKeys[tabItem]!,
         tabItem: tabItem,
       ),
     );

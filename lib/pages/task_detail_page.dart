@@ -16,7 +16,7 @@ class TaskDetailPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'タスク詳細ページです',
             ),
           ],
         ),

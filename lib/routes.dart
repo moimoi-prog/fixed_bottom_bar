@@ -3,7 +3,7 @@ import 'package:fixed_bottom_tab/tab_type.dart';
 import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
-final Map<TabType, GlobalKey<NavigatorState>> navigatorKeys = {
+final Map<TabType, GlobalKey<NavigatorState>> tabNavigatorKeys = {
   TabType.home: GlobalKey<NavigatorState>(),
   TabType.taskList: GlobalKey<NavigatorState>(),
 };
@@ -16,7 +16,6 @@ const taskListRoute = '/task/list';
 const taskDetailRoute = '/task/detail';
 
 Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
-  // rootRoute: (BuildContext context) => RootPage(),
   homeRoute: (BuildContext context) => const HomePage(),
   accountDetailRoute: (BuildContext context) => const AccountDetailPage(),
   settingRoute: (BuildContext context) => const SettingPage(),
